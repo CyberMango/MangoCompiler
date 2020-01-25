@@ -1,0 +1,24 @@
+action type (10b) | session id (8b)
+
+action type - id of the action to be done. determines the structure of the packet.
+session id - id of the current code session. id per connection. initialized when connection is severed.
+
+assumptions:
+    - client knows he is the client. server knows he is the server.
+    - reliability is done by the lower layers.
+    - order is guaranteed by lower layers.
+
+actions:
+    0x00000 - compile code and send errors/warnings:
+        request: action type (10) | session id (8) | files quantity (8) | files (...)
+            files: type (4) | action (5) | name length (8) | content length (17) | name (name length) | content (content length)
+                type: is it a header? source file? makefile? shared object?...
+                    * in the future use this to send compiler flags / make targets.
+                action: is it a new file? diff for a file? deleted file?...
+        response: session id (8) | problems quantity (10) | problems (...)
+            problems: type (1) | content length (11) | content (content length)
+                type: 0 for error, 1 for warning.
+
+    0x00001 - run code and send output, return value.
+
+    0x00002 - Compile code and run it.

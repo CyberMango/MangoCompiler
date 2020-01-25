@@ -5,6 +5,7 @@ ultimate demands:
         - output.
         - return value.
         - listed errors/warnnings.
+        - created files.
     - send files in parts (not whole files at once).
     - get whole input at once.
     - get input interactively (input requests when needed).
