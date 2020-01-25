@@ -1,0 +1,38 @@
+ultimate demands:
+    - compile multiple files.
+        - with their original directories structure.
+    - run code and send:
+        - output.
+        - return value.
+        - listed errors/warnnings.
+    - send files in parts (not whole files at once).
+    - get whole input at once.
+    - get input interactively (input requests when needed).
+    - caching:
+        - only send changed files.
+        - only send diffs? FFF(Far Future Feature).
+    - Have a generic makefile.
+    - Allow receiving a different makefile.
+    - Allow receiving compiler commands.
+    - Support multiple languages!
+    - Client end of connection/session request.
+    - Server end of connection/session request.
+    - Allow parallel actions from a single connection.
+    - Have flags that allow adding more features (like the ones in the ultimate demands).
+
+compromised demands:
+    - compile multiple files.
+        - with their original directories structure.
+    - run code and send:
+        - output.
+        - return value.
+        - listed errors/warnnings.
+    - get whole input at once.
+    - get input interactively (input requests when needed).
+    - caching:
+        - only send changed files.
+    - Have a generic makefile.
+    - Client end of connection/session request.
+    - Server end of connection/session request.
+    - Allow parallel actions from a single connection.
+    - Have flags that allow adding more features (like the ones in the ultimate demands).
